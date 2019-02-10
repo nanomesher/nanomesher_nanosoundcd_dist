@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/volumio/nanomesher_nanosoundcd
+sudo python -c 'import ripprogress_web; ripprogress_web.main()'
+
