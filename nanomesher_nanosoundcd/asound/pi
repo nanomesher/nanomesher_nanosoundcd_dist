@@ -1,0 +1,4 @@
+ 0 [ALSA           ]: bcm2835_alsa - bcm2835 ALSA
+                      bcm2835 ALSA
+ 1 [sndrpihifiberry]: HifiberryDacp - snd_rpi_hifiberry_dacplus
+                      snd_rpi_hifiberry_dacplus

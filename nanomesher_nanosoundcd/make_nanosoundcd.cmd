@@ -1,3 +1,5 @@
+python -c "import cdsystem;cdsystem.updateVersionFile()"
+
 rmdir ..\nanomesher_nanosoundcd_dist\nanomesher_nanosoundcd /S /Q
 mkdir ..\nanomesher_nanosoundcd_dist\nanomesher_nanosoundcd
 xcopy *.* ..\nanomesher_nanosoundcd_dist\nanomesher_nanosoundcd /S
