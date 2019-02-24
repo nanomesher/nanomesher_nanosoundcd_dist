@@ -1,8 +1,5 @@
 #!/bin/bash
 
-sudo /bin/systemctl stop nanosoundcd_web
-sudo /bin/systemctl stop nanosoundcd_progressweb
-
 cd /tmp
 wget https://github.com/nanomesher/nanomesher_nanosoundcd_dist/raw/master/packages/nanomesher_nanosoundcd.tar.gz
 sudo tar xvf /tmp/nanomesher_nanosoundcd.tar.gz -C /home/volumio/
@@ -21,5 +18,5 @@ rm /tmp/nanosound_cd.zip
 
 cp -a /home/volumio/nanosound_cd /data/plugins/music_service/
 cd /home/volumio/nanosound_cd
-volumio vrestart
+
 
