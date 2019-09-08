@@ -1,0 +1,5 @@
+ 0 [OnBoard        ]: USB-Audio - USB Audio OnBoard
+                      Generic USB Audio OnBoard at usb-ff500000.usb-1, high speed
+ 1 [sndrpihifiberry]: HifiberryDacp - snd_rpi_hifiberry_dacplus
+                      snd_rpi_hifiberry_dacplus
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=NanoSound CD Progress Web Service
+
+[Service]
+ExecStart=/home/volumio/nanomesher_nanosoundcd/nanosoundcd_progressweb
+WorkingDirectory=/home/volumio/nanomesher_nanosoundcd/
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=nanosoundcd_progressweb

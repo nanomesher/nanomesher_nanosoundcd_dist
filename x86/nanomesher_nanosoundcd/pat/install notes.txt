@@ -1,0 +1,71 @@
+1. install python audio tools. Put __init__ into /usr/local/lib/python2.7/dist-packages/audiotools
+2. install flask
+3. install nanosound 
+4. install libsamplerate (download and compile - http://www.mega-nerd.com/SRC/download.html)
+5. copy etc asound.conf file
+6. install vlc
+
+
+
+--- Detail
+
+1.	install python audio tools.
+
+sudo apt-get update
+git clone https://github.com/tuffy/python-audio-tools.git
+sudo apt-get install libcdio-dev  libcdio-paranoia-dev
+cd python-audio-tools
+sudo make install
+
+
+2.	install flask
+
+apt-get remove python-pip
+sudo easy_install pip
+sudo pip install Flask
+sudo pip install flask_table
+sudo pip install flask_cors
+
+
+3.	install nanosound (under plugin in volumio)
+
+4.	install libsamplerate (download and compile - http://www.mega-nerd.com/SRC/download.html)
+
+sudo apt-get install libasound2-plugins
+
+
+5.	install vlc
+
+sudo apt-get update
+sudo apt-get install vlc
+
+pip install python-vlc
+
+
+6.	vsftp
+
+sudo apt-get install vsftpd
+
+
+7.	install memcache
+
+sudo apt-get install Memcached
+sudo pip install pymemcache
+
+
+8.	Put __init__ into /usr/local/lib/python2.7/dist-packages/audiotools
+
+sudo cp /home/volumio/nanomesher_nanosoundcd/audiotools/__init__.py /usr/local/lib/python2.7/dist-packages/audiotools
+
+9.	Copy asound
+
+sudo cp asound/asound.conf /etc/asound.conf
+
+10.	copy service files
+
+sudo cp /home/volumio/nanomesher_nanosoundcd/service/*.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable nanosoundcd_progressweb.service
+sudo systemctl enable nanosoundcd_web.service
+sudo systemctl start nanosoundcd_progressweb.service
+sudo systemctl start nanosoundcd_web.service

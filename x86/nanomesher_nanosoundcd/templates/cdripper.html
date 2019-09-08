@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>NanoSound CD</title>
+</head>
+<body>
+<a href="/"><img width="200" height="32" src="/static/nanoplayer.png" class="custom-logo" alt="Nanomesher" itemprop="logo" /></a>
+<br>
+<h1>CD Ripper</h1>
+<h2>{{ playing["track_name"]}} - {{ playing["artist_name"]}}</h2>
+
+<a href="/prev">Prev</a>&nbsp;&nbsp;<a href="/playall">Play All</a>&nbsp;&nbsp;<a href="/playtoggle">Play/Pause</a>&nbsp;&nbsp;<a href="/next">Next</a>
+
+<form action="/rip" method=post>
+    <table border="1">
+        <tr>
+            <th>To Extract</th>
+            <th>Track No.</th>
+            <th>Track Name</th>
+            <th>Artist</th>
+            <th>Album Name</th>
+        </tr>
+        {% for metadata in metadatas %}
+            <tr>
+                <td><input type=checkbox name=to_rip value="{{ metadata.track_number}}"></td>
+                <td>{{ metadata.track_number }}</td>
+                <td>{{ metadata.track_name }}</td>
+                <td>{{ metadata.artist_name }}</td>
+                <td>{{ metadata.album_name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <input type=submit value=Extract>
+</form>
+</body>
+</html>
