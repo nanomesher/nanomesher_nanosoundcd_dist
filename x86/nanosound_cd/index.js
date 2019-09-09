@@ -276,7 +276,7 @@ nanosoundCd.prototype.onRestart = function() {
                                                                 		        } else {
                                                                                 		self.logger.info('NanoSound CD daemon started');
                                                                                			self.commandRouter.pushToastMessage('success', 'NanoSound CD', 'NanoSound CD daemon restarting. Please wait around 10s before playing CD');
-												sleep(3000);
+																						sleep(3000);
 		                                                                        }
 																				
 																				defer.resolve();
@@ -492,7 +492,7 @@ nanosoundCd.prototype.upgrade=function()
 																												} else {
 																														self.logger.info('NanoSound CD updated');
 																														self.commandRouter.pushToastMessage('success', 'NanoSound CD', 'Volumio and NanoSound CD daemon restarting');
-																														sleep.sleep(3);
+																														sleep(3000);
 
 																														exec('/usr/bin/sudo volumio vrestart', {uid:1000,gid:1000},
 																														function (error, stdout, stderr) {
