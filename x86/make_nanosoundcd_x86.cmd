@@ -13,5 +13,5 @@ cd ..
 xcopy nanomesher_nanosoundcd_x86.tar.gz ..\packages /Y
 del nanomesher_nanosoundcd_x86-%date:~-4,4%%date:~-7,2%%date:~-10,2%.tar.gz
 ren nanomesher_nanosoundcd_x86.tar.gz nanomesher_nanosoundcd_x86-%date:~-4,4%%date:~-7,2%%date:~-10,2%.tar.gz
-move /Y nanomesher_nanosoundcd_x86-%date:~-4,4%%date:~-7,2%%date:~-10,2%.tar.gz ./packages
+move /Y nanomesher_nanosoundcd_x86-%date:~-4,4%%date:~-7,2%%date:~-10,2%.tar.gz ..\packages
 
